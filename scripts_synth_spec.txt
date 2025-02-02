@@ -1,0 +1,38 @@
+---------train-----------
+nohup python -u synth_spec_learning.py --obj dist --num-spec 100 --device 1 --split-seed 56 --rand > logs/synth_spec/num_spec100_rand/dist_56.txt &
+nohup python -u synth_spec_learning.py --obj clusCLS --num-spec 100 --device 2 --split-seed 56 --rand > logs/synth_spec/num_spec100_rand/cluscls_56.txt &
+nohup python -u synth_spec_learning.py --obj onlyCLS --num-spec 100 --device 3 --split-seed 56 --rand > logs/synth_spec/num_spec100_rand/onlycls_56.txt &
+
+nohup python -u synth_spec_learning.py --obj dist --num-spec 100 --device 0 --split-seed 4 > logs/synth_spec/num_spec100/dist_4.txt &
+nohup python -u synth_spec_learning.py --obj clusCLS --num-spec 100 --device 0 --split-seed 4 > logs/synth_spec/num_spec100/cluscls_4.txt &
+nohup python -u synth_spec_learning.py --obj onlyCLS --num-spec 100 --device 0 --split-seed 4 > logs/synth_spec/num_spec100/onlycls_4.txt &
+
+nohup python -u synth_spec_learning.py --obj dist --num-spec 100 --device 1 --split-seed 30 > logs/synth_spec/num_spec100/dist_30.txt &
+nohup python -u synth_spec_learning.py --obj clusCLS --num-spec 100 --device 1 --split-seed 30 > logs/synth_spec/num_spec100/cluscls_30.txt &
+nohup python -u synth_spec_learning.py --obj onlyCLS --num-spec 100 --device 1 --split-seed 30 > logs/synth_spec/num_spec100/onlycls_30.txt &
+
+nohup python -u synth_spec_learning.py --obj dist --num-spec 100 --device 2 --split-seed 780 > logs/synth_spec/num_spec100/dist_780.txt &
+nohup python -u synth_spec_learning.py --obj clusCLS --num-spec 100 --device 2 --split-seed 780 > logs/synth_spec/num_spec100/cluscls_780.txt &
+nohup python -u synth_spec_learning.py --obj onlyCLS --num-spec 100 --device 2 --split-seed 780 > logs/synth_spec/num_spec100/onlycls_780.txt &
+
+nohup python -u synth_spec_learning.py --obj dist --num-spec 100 --device 3 --split-seed 26 > logs/synth_spec/num_spec100/dist_26.txt &
+nohup python -u synth_spec_learning.py --obj clusCLS --num-spec 100 --device 3 --split-seed 26 > logs/synth_spec/num_spec100/cluscls_26.txt &
+nohup python -u synth_spec_learning.py --obj onlyCLS --num-spec 100 --device 3 --split-seed 26 > logs/synth_spec/num_spec100/onlycls_26.txt &
+
+
+---------eval-----------
+nohup python -u synth_spec_get_val_set_emb_clus.py --obj dist --split-seed 56 --device 0 --num-spec 400 --rand > logs/synth_spec/num_spec400_rand/eval_dist_56.txt &
+nohup python -u synth_spec_get_val_set_emb_clus.py --obj dist --split-seed 56 --device 0 --num-spec 200 --rand > logs/synth_spec/num_spec200_rand/eval_dist_56.txt &
+nohup python -u synth_spec_get_val_set_emb_clus.py --obj dist --split-seed 56 --device 0 --num-spec 100 --rand > logs/synth_spec/num_spec100_rand/eval_dist_56.txt &
+
+nohup python -u synth_spec_get_val_set_emb_clus.py --obj onlyCLS --split-seed 56 --device 1 --num-spec 400 --rand > logs/synth_spec/num_spec400_rand/eval_onlyCLS_56.txt &
+nohup python -u synth_spec_get_val_set_emb_clus.py --obj onlyCLS --split-seed 56 --device 1 --num-spec 200 --rand > logs/synth_spec/num_spec200_rand/eval_onlyCLS_56.txt &
+nohup python -u synth_spec_get_val_set_emb_clus.py --obj onlyCLS --split-seed 56 --device 1 --num-spec 100 --rand > logs/synth_spec/num_spec100_rand/eval_onlyCLS_56.txt &
+
+nohup python -u synth_spec_get_val_set_emb_clus.py --obj clusCLS --split-seed 56 --device 1 --num-spec 400 --rand > logs/synth_spec/num_spec400_rand/eval_clusCLS_56.txt &
+nohup python -u synth_spec_get_val_set_emb_clus.py --obj clusCLS --split-seed 56 --device 2 --num-spec 200 --rand > logs/synth_spec/num_spec200_rand/eval_clusCLS_56.txt &
+nohup python -u synth_spec_get_val_set_emb_clus.py --obj clusCLS --split-seed 56 --device 2 --num-spec 100 --rand > logs/synth_spec/num_spec100_rand/eval_clusCLS_56.txt &
+
+nohup python -u synth_spec_get_val_set_emb_clus.py --obj rawclus --split-seed 56 --device 1 --num-spec 400 --rand > logs/synth_spec/num_spec400_rand/eval_rawclus_56.txt &
+nohup python -u synth_spec_get_val_set_emb_clus.py --obj rawclus --split-seed 56 --device 2 --num-spec 200 --rand > logs/synth_spec/num_spec200_rand/eval_rawclus_56.txt &
+nohup python -u synth_spec_get_val_set_emb_clus.py --obj rawclus --split-seed 56 --device 2 --num-spec 100 --rand > logs/synth_spec/num_spec100_rand/eval_rawclus_56.txt &
